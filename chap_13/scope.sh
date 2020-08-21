@@ -1,0 +1,23 @@
+#!/bin/sh
+
+myfunc()
+{
+  echo "I was called as : $@"
+  x=2
+}
+
+### Main script starts here 
+
+echo "Script was called with $@"
+x=1
+echo "x is $x"
+myfunc 1 2 3
+echo "x is $x"
+
+
+### Console Output:
+# $ ./scope.sh a b c
+# Script was called with a b c
+# x is 1
+# I was called as : 1 2 3
+# x is 2
